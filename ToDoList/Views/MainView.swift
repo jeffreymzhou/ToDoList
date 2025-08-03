@@ -20,9 +20,13 @@ struct MainView: View {
     @ViewBuilder
     var accountView: some View {
         TabView {
-            ToDoListView(userId: viewModel.currentUserId)
+            TaskTimerListView(userId: viewModel.currentUserId)
                 .tabItem{
-                    Label("Home", systemImage: "house")
+                    Label("Task Timers", systemImage: "house")
+                }
+            SummaryView()
+                .tabItem{
+                    Label("Summary", systemImage: "house")
                 }
             ProfileView()
                 .tabItem{
