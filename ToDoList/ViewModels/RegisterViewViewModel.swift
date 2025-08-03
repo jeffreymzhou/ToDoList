@@ -20,7 +20,7 @@ class RegisterViewViewModel: ObservableObject {
     func register() {
         print("Attempting to register user")
         guard validate() else {
-            print("invalid attempt!")
+            print("failed to validate input fields")
             return
         }
         
@@ -70,7 +70,7 @@ class RegisterViewViewModel: ObservableObject {
             return false
         }
         
-        guard password.count > 6 else {
+        guard password.count > 5 else {
             return false
         }
         
