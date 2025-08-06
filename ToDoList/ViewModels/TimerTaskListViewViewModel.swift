@@ -19,40 +19,65 @@ class TaskTimerListViewViewModel: ObservableObject {
     private var db: Firestore
     var timer: Timer = Timer()
     private let userId: String
+    private var didBecomeActiveObserver: NSObjectProtocol?
     
     init(userId: String) {
         self.userId = userId
         self.db = Firestore.firestore()
         Task {
-            do {
-                print("trying to query for snapshot of all active task timers")
-                let querySnapshot = try await self.db.collection("users").document(userId).collection("tasks").whereField("isActive", isEqualTo: true)
-                    .getDocuments()
+            await self.loadActiveTaskTimer(for: userId)
+        }
+        self.setupDidBecomeActiveNotification()
+    }
 
-                let activeTaskTimers: [TaskTimer] = try querySnapshot.documents.compactMap { document in
-                        try document.data(as: TaskTimer.self)  // Decode document data as TaskTimer
-                    }
-                
-                if activeTaskTimers.count > 1 {
-                    print("Error: More than one active timer found in db")
-                    return
-                }
-                
-                if let activeTask = activeTaskTimers.first {
-                    
-                    self.activeTaskId = activeTask.id
-                    self.activeTaskName = activeTask.title
-                    self.elapsedTimeSeconds = Date().timeIntervalSince1970 - activeTask.startTime
-                    self.startTimer()
+    deinit {
+        if let observer = didBecomeActiveObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
+    }
 
-                } else {
-                    print("No documents found in querySnapshot.")
-                }
-                
-                print("Found all docs with active status: " + querySnapshot.documents.count.description)
-            } catch {
-                print("Error getting documents: \(error)")
+    private func setupDidBecomeActiveNotification() {
+        didBecomeActiveObserver = NotificationCenter.default.addObserver(
+            forName: UIApplication.didBecomeActiveNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            print("app became active again")
+            guard let self = self else {
+                return }
+            Task {
+                await self.loadActiveTaskTimer(for: self.userId)
             }
+        }
+    }
+    
+    func loadActiveTaskTimer(for userId: String) async {
+        do {
+            print("Querying for active task timers")
+            let querySnapshot = try await self.db.collection("users").document(userId).collection("tasks").whereField("isActive", isEqualTo: true)
+                .getDocuments()
+
+            let activeTaskTimers: [TaskTimer] = try querySnapshot.documents.compactMap { document in
+                    try document.data(as: TaskTimer.self)  // Decode document data as TaskTimer
+                }
+            
+            if activeTaskTimers.count > 1 {
+                print("Error: More than one active timer found in db")
+                return
+            }
+            
+            if let activeTask = activeTaskTimers.first {
+                print("Found an active task, setting it to start: \(activeTask.title)")
+                self.activeTaskId = activeTask.id
+                self.activeTask = activeTask
+                self.activeTaskName = activeTask.title
+                self.elapsedTimeSeconds = Date().timeIntervalSince1970 - activeTask.startTime
+                self.startTimer()
+            } else {
+                print("No active tasks found")
+            }
+        } catch {
+            print("Error getting documents: \(error)")
         }
     }
     
@@ -106,7 +131,7 @@ class TaskTimerListViewViewModel: ObservableObject {
             self.activeTaskId = nil
             self.activeTaskName = "none"
         }
-        
+
         if startNewTask {
             var newTaskCopy = newTask
             newTaskCopy.start()
@@ -119,17 +144,19 @@ class TaskTimerListViewViewModel: ObservableObject {
     }
     
     func startTimer() {
-        timer.invalidate()
-        print("starting timer")
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {(timer) in
-            self.elapsedTimeSeconds += 1
-            print("tick")
-        })
+        Task { @MainActor in
+            timer.invalidate()
+            print("starting timer")
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] timer in
+                guard let self = self else { return }
+                self.elapsedTimeSeconds += 1
+                print("tick \(self.elapsedTimeSeconds)")
+            })
+        }
     }
     
     func resetTimer() {
         timer.invalidate()
         elapsedTimeSeconds = 0
     }
-
 }
