@@ -28,6 +28,7 @@
 		5E3AC3652BB91AB2001C8876 /* ToDoListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AC3642BB91AB2001C8876 /* ToDoListViewViewModel.swift */; };
 		5E3AC3672BB91CB3001C8876 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AC3662BB91CB3001C8876 /* HeaderView.swift */; };
 		5E3AC3692BB9239F001C8876 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AC3682BB9239F001C8876 /* TLButton.swift */; };
+		5E4F03FE2E3FFD4700823DF5 /* YearlyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4F03FD2E3FFD3300823DF5 /* YearlyGridView.swift */; };
 		5E6E24492CD9DCB60075AEC3 /* TimeSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6E24482CD9DCB60075AEC3 /* TimeSegment.swift */; };
 		5E6E244B2CD9F2AE0075AEC3 /* TimeSegmentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6E244A2CD9F2AE0075AEC3 /* TimeSegmentListView.swift */; };
 		5E6E244E2CD9F66D0075AEC3 /* TimeFormatUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6E244D2CD9F66D0075AEC3 /* TimeFormatUtils.swift */; };
@@ -90,6 +91,7 @@
 		5E3AC3642BB91AB2001C8876 /* ToDoListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewViewModel.swift; sourceTree = "<group>"; };
 		5E3AC3662BB91CB3001C8876 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		5E3AC3682BB9239F001C8876 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
+		5E4F03FD2E3FFD3300823DF5 /* YearlyGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearlyGridView.swift; sourceTree = "<group>"; };
 		5E6E24482CD9DCB60075AEC3 /* TimeSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSegment.swift; sourceTree = "<group>"; };
 		5E6E244A2CD9F2AE0075AEC3 /* TimeSegmentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSegmentListView.swift; sourceTree = "<group>"; };
 		5E6E244D2CD9F66D0075AEC3 /* TimeFormatUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatUtils.swift; sourceTree = "<group>"; };
@@ -108,13 +110,13 @@
 		5EAEC5DB2CCDB6D200BB11F8 /* NewTaskItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemViewViewModel.swift; sourceTree = "<group>"; };
 		5EAEC5DD2CCDB7A100BB11F8 /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
 		5ED670202BB918CB0061210C /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		5EDC5C1C2BB8DD7800363517 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EDC5C1C2BB8DD7800363517 /* ActiviTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiviTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EDC5C1F2BB8DD7800363517 /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		5EDC5C232BB8DD7900363517 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EDC5C262BB8DD7900363517 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5EDC5C2C2BB8DD7900363517 /* ToDoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EDC5C2C2BB8DD7900363517 /* ActiviTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiviTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EDC5C302BB8DD7900363517 /* ToDoListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListTests.swift; sourceTree = "<group>"; };
-		5EDC5C362BB8DD7900363517 /* ToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EDC5C362BB8DD7900363517 /* ActiviTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiviTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EDC5C3A2BB8DD7900363517 /* ToDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITests.swift; sourceTree = "<group>"; };
 		5EDC5C3C2BB8DD7900363517 /* ToDoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +168,7 @@
 		5E7E58872BB8EC150091A086 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5E4F03FD2E3FFD3300823DF5 /* YearlyGridView.swift */,
 				5E3AC3662BB91CB3001C8876 /* HeaderView.swift */,
 				5E3AC3482BB919C6001C8876 /* LoginView.swift */,
 				5ED670202BB918CB0061210C /* MainView.swift */,
@@ -230,9 +233,9 @@
 		5EDC5C132BB8DD7800363517 = {
 			isa = PBXGroup;
 			children = (
-				5EDC5C1E2BB8DD7800363517 /* ToDoList */,
-				5EDC5C2F2BB8DD7900363517 /* ToDoListTests */,
-				5EDC5C392BB8DD7900363517 /* ToDoListUITests */,
+				5EDC5C1E2BB8DD7800363517 /* ActiviTimer */,
+				5EDC5C2F2BB8DD7900363517 /* ActiviTimerTests */,
+				5EDC5C392BB8DD7900363517 /* ActiviTimerUITests */,
 				5EDC5C1D2BB8DD7800363517 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -240,14 +243,14 @@
 		5EDC5C1D2BB8DD7800363517 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5EDC5C1C2BB8DD7800363517 /* ToDoList.app */,
-				5EDC5C2C2BB8DD7900363517 /* ToDoListTests.xctest */,
-				5EDC5C362BB8DD7900363517 /* ToDoListUITests.xctest */,
+				5EDC5C1C2BB8DD7800363517 /* ActiviTimer.app */,
+				5EDC5C2C2BB8DD7900363517 /* ActiviTimerTests.xctest */,
+				5EDC5C362BB8DD7900363517 /* ActiviTimerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5EDC5C1E2BB8DD7800363517 /* ToDoList */ = {
+		5EDC5C1E2BB8DD7800363517 /* ActiviTimer */ = {
 			isa = PBXGroup;
 			children = (
 				5E6E24532CDB425A0075AEC3 /* Enums */,
@@ -258,7 +261,7 @@
 				5E7E58872BB8EC150091A086 /* Views */,
 				5EDC5C252BB8DD7900363517 /* Preview Content */,
 			);
-			path = ToDoList;
+			path = ActiviTimer;
 			sourceTree = "<group>";
 		};
 		5EDC5C252BB8DD7900363517 /* Preview Content */ = {
@@ -269,29 +272,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5EDC5C2F2BB8DD7900363517 /* ToDoListTests */ = {
+		5EDC5C2F2BB8DD7900363517 /* ActiviTimerTests */ = {
 			isa = PBXGroup;
 			children = (
 				5EDC5C302BB8DD7900363517 /* ToDoListTests.swift */,
 			);
-			path = ToDoListTests;
+			path = ActiviTimerTests;
 			sourceTree = "<group>";
 		};
-		5EDC5C392BB8DD7900363517 /* ToDoListUITests */ = {
+		5EDC5C392BB8DD7900363517 /* ActiviTimerUITests */ = {
 			isa = PBXGroup;
 			children = (
 				5EDC5C3A2BB8DD7900363517 /* ToDoListUITests.swift */,
 				5EDC5C3C2BB8DD7900363517 /* ToDoListUITestsLaunchTests.swift */,
 			);
-			path = ToDoListUITests;
+			path = ActiviTimerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5EDC5C1B2BB8DD7800363517 /* ToDoList */ = {
+		5EDC5C1B2BB8DD7800363517 /* ActiviTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5EDC5C402BB8DD7900363517 /* Build configuration list for PBXNativeTarget "ToDoList" */;
+			buildConfigurationList = 5EDC5C402BB8DD7900363517 /* Build configuration list for PBXNativeTarget "ActiviTimer" */;
 			buildPhases = (
 				5EDC5C182BB8DD7800363517 /* Sources */,
 				5EDC5C192BB8DD7800363517 /* Frameworks */,
@@ -301,19 +304,19 @@
 			);
 			dependencies = (
 			);
-			name = ToDoList;
+			name = ActiviTimer;
 			packageProductDependencies = (
 				5E220D192BB8E2D8004CC3C8 /* FirebaseAuth */,
 				5E220D1B2BB8E2D8004CC3C8 /* FirebaseFirestore */,
 				5E220D1D2BB8E2D8004CC3C8 /* FirebaseFirestoreSwift */,
 			);
 			productName = ToDoList;
-			productReference = 5EDC5C1C2BB8DD7800363517 /* ToDoList.app */;
+			productReference = 5EDC5C1C2BB8DD7800363517 /* ActiviTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5EDC5C2B2BB8DD7900363517 /* ToDoListTests */ = {
+		5EDC5C2B2BB8DD7900363517 /* ActiviTimerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5EDC5C432BB8DD7900363517 /* Build configuration list for PBXNativeTarget "ToDoListTests" */;
+			buildConfigurationList = 5EDC5C432BB8DD7900363517 /* Build configuration list for PBXNativeTarget "ActiviTimerTests" */;
 			buildPhases = (
 				5EDC5C282BB8DD7900363517 /* Sources */,
 				5EDC5C292BB8DD7900363517 /* Frameworks */,
@@ -324,14 +327,14 @@
 			dependencies = (
 				5EDC5C2E2BB8DD7900363517 /* PBXTargetDependency */,
 			);
-			name = ToDoListTests;
+			name = ActiviTimerTests;
 			productName = ToDoListTests;
-			productReference = 5EDC5C2C2BB8DD7900363517 /* ToDoListTests.xctest */;
+			productReference = 5EDC5C2C2BB8DD7900363517 /* ActiviTimerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5EDC5C352BB8DD7900363517 /* ToDoListUITests */ = {
+		5EDC5C352BB8DD7900363517 /* ActiviTimerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5EDC5C462BB8DD7900363517 /* Build configuration list for PBXNativeTarget "ToDoListUITests" */;
+			buildConfigurationList = 5EDC5C462BB8DD7900363517 /* Build configuration list for PBXNativeTarget "ActiviTimerUITests" */;
 			buildPhases = (
 				5EDC5C322BB8DD7900363517 /* Sources */,
 				5EDC5C332BB8DD7900363517 /* Frameworks */,
@@ -342,9 +345,9 @@
 			dependencies = (
 				5EDC5C382BB8DD7900363517 /* PBXTargetDependency */,
 			);
-			name = ToDoListUITests;
+			name = ActiviTimerUITests;
 			productName = ToDoListUITests;
-			productReference = 5EDC5C362BB8DD7900363517 /* ToDoListUITests.xctest */;
+			productReference = 5EDC5C362BB8DD7900363517 /* ActiviTimerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -355,7 +358,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					5EDC5C1B2BB8DD7800363517 = {
 						CreatedOnToolsVersion = 15.3;
@@ -370,7 +373,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5EDC5C172BB8DD7800363517 /* Build configuration list for PBXProject "ToDoList" */;
+			buildConfigurationList = 5EDC5C172BB8DD7800363517 /* Build configuration list for PBXProject "ActiviTimer" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -386,9 +389,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5EDC5C1B2BB8DD7800363517 /* ToDoList */,
-				5EDC5C2B2BB8DD7900363517 /* ToDoListTests */,
-				5EDC5C352BB8DD7900363517 /* ToDoListUITests */,
+				5EDC5C1B2BB8DD7800363517 /* ActiviTimer */,
+				5EDC5C2B2BB8DD7900363517 /* ActiviTimerTests */,
+				5EDC5C352BB8DD7900363517 /* ActiviTimerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -448,6 +451,7 @@
 				5E3AC34F2BB919EE001C8876 /* RegisterView.swift in Sources */,
 				5E3AC35B2BB91A8B001C8876 /* LoginViewViewModel.swift in Sources */,
 				5EAEC5D02CCDAD7A00BB11F8 /* TimerTaskListViewViewModel.swift in Sources */,
+				5E4F03FE2E3FFD4700823DF5 /* YearlyGridView.swift in Sources */,
 				5EDC5C202BB8DD7800363517 /* ToDoListApp.swift in Sources */,
 				5E3AC3652BB91AB2001C8876 /* ToDoListViewViewModel.swift in Sources */,
 				5E82EEEE2C68391C00548EC5 /* Extensions.swift in Sources */,
@@ -486,12 +490,12 @@
 /* Begin PBXTargetDependency section */
 		5EDC5C2E2BB8DD7900363517 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5EDC5C1B2BB8DD7800363517 /* ToDoList */;
+			target = 5EDC5C1B2BB8DD7800363517 /* ActiviTimer */;
 			targetProxy = 5EDC5C2D2BB8DD7900363517 /* PBXContainerItemProxy */;
 		};
 		5EDC5C382BB8DD7900363517 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5EDC5C1B2BB8DD7800363517 /* ToDoList */;
+			target = 5EDC5C1B2BB8DD7800363517 /* ActiviTimer */;
 			targetProxy = 5EDC5C372BB8DD7900363517 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -621,12 +625,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ToDoList/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = RFNJ75Y4U9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "To Do List";
+				INFOPLIST_KEY_CFBundleDisplayName = Activitimer;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -637,11 +644,16 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Jeffrey.ToDoList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreymzhou.activitytracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -650,12 +662,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ToDoList/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = RFNJ75Y4U9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "To Do List";
+				INFOPLIST_KEY_CFBundleDisplayName = Activitimer;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -666,18 +681,22 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Jeffrey.ToDoList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreymzhou.activitytracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		5EDC5C442BB8DD7900363517 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -689,14 +708,13 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDoList";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActiviTimer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ActiviTimer";
 			};
 			name = Debug;
 		};
 		5EDC5C452BB8DD7900363517 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -708,14 +726,13 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDoList";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActiviTimer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ActiviTimer";
 			};
 			name = Release;
 		};
 		5EDC5C472BB8DD7900363517 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -732,7 +749,6 @@
 		5EDC5C482BB8DD7900363517 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -749,7 +765,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5EDC5C172BB8DD7800363517 /* Build configuration list for PBXProject "ToDoList" */ = {
+		5EDC5C172BB8DD7800363517 /* Build configuration list for PBXProject "ActiviTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5EDC5C3E2BB8DD7900363517 /* Debug */,
@@ -758,7 +774,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5EDC5C402BB8DD7900363517 /* Build configuration list for PBXNativeTarget "ToDoList" */ = {
+		5EDC5C402BB8DD7900363517 /* Build configuration list for PBXNativeTarget "ActiviTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5EDC5C412BB8DD7900363517 /* Debug */,
@@ -767,7 +783,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5EDC5C432BB8DD7900363517 /* Build configuration list for PBXNativeTarget "ToDoListTests" */ = {
+		5EDC5C432BB8DD7900363517 /* Build configuration list for PBXNativeTarget "ActiviTimerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5EDC5C442BB8DD7900363517 /* Debug */,
@@ -776,7 +792,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5EDC5C462BB8DD7900363517 /* Build configuration list for PBXNativeTarget "ToDoListUITests" */ = {
+		5EDC5C462BB8DD7900363517 /* Build configuration list for PBXNativeTarget "ActiviTimerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5EDC5C472BB8DD7900363517 /* Debug */,
