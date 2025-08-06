@@ -14,8 +14,8 @@ struct LoginView: View {
         NavigationView {
             VStack {
                 // Header
-                HeaderView(title: "To Do List",
-                           subtitle: "Get things done",
+                HeaderView(title: "Activitimer",
+                           subtitle: "Time your Activities",
                            angle: 15,
                            background: .pink)
                 
