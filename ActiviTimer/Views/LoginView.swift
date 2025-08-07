@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import AuthenticationServices
+import CryptoKit
 
 struct LoginView: View {
     @StateObject var viewModel = LoginViewViewModel()
@@ -17,7 +19,7 @@ struct LoginView: View {
                 HeaderView(title: "Activitimer",
                            subtitle: "Time your Activities",
                            angle: 15,
-                           background: .pink)
+                           background: .black)
                 
                 // Login form
                 Form {
@@ -40,6 +42,15 @@ struct LoginView: View {
                     ) {
                         viewModel.login()
                     }
+                    
+                    SignInWithAppleButton(
+                        onRequest: { request in
+                            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
+                        },
+                        onCompletion: { result in
+                            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
+                        }
+                    )
                 }.offset(y:-60)
                 
                 // Create Account
