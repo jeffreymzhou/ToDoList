@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E220D172BB8E0F9004CC3C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E220D162BB8E0F9004CC3C8 /* GoogleService-Info.plist */; };
 		5E220D1A2BB8E2D8004CC3C8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5E220D192BB8E2D8004CC3C8 /* FirebaseAuth */; };
 		5E220D1C2BB8E2D8004CC3C8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5E220D1B2BB8E2D8004CC3C8 /* FirebaseFirestore */; };
 		5E220D1E2BB8E2D8004CC3C8 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5E220D1D2BB8E2D8004CC3C8 /* FirebaseFirestoreSwift */; };
+		5E2C45C02E446085008A0390 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E2C45BF2E446085008A0390 /* GoogleService-Info.plist */; };
 		5E3AC3492BB919C6001C8876 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AC3482BB919C6001C8876 /* LoginView.swift */; };
 		5E3AC34B2BB919D5001C8876 /* NewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AC34A2BB919D5001C8876 /* NewItemView.swift */; };
 		5E3AC34D2BB919E1001C8876 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AC34C2BB919E1001C8876 /* ProfileView.swift */; };
@@ -72,7 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5E220D162BB8E0F9004CC3C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5E2C45BE2E445292008A0390 /* ActiviTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ActiviTimer.entitlements; sourceTree = "<group>"; };
+		5E2C45BF2E446085008A0390 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E3AC3482BB919C6001C8876 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5E3AC34A2BB919D5001C8876 /* NewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
 		5E3AC34C2BB919E1001C8876 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -219,7 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				5EDC5C232BB8DD7900363517 /* Assets.xcassets */,
-				5E220D162BB8E0F9004CC3C8 /* GoogleService-Info.plist */,
+				5E2C45BF2E446085008A0390 /* GoogleService-Info.plist */,
 				5EDC5C1F2BB8DD7800363517 /* ToDoListApp.swift */,
 				5E82EEED2C68391C00548EC5 /* Extensions.swift */,
 				5EA5C1332CC5FF2700CCE426 /* Launch Screen.storyboard */,
@@ -250,6 +251,7 @@
 		5EDC5C1E2BB8DD7800363517 /* ActiviTimer */ = {
 			isa = PBXGroup;
 			children = (
+				5E2C45BE2E445292008A0390 /* ActiviTimer.entitlements */,
 				5E6E24532CDB425A0075AEC3 /* Enums */,
 				5E6E244C2CD9F6460075AEC3 /* Utils */,
 				5E7E588A2BB9161B0091A086 /* Other */,
@@ -399,9 +401,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EDC5C272BB8DD7900363517 /* Preview Assets.xcassets in Resources */,
+				5E2C45C02E446085008A0390 /* GoogleService-Info.plist in Resources */,
 				5EDC5C242BB8DD7900363517 /* Assets.xcassets in Resources */,
 				5EA5C1342CC5FF2700CCE426 /* Launch Screen.storyboard in Resources */,
-				5E220D172BB8E0F9004CC3C8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +623,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ActiviTimer/ActiviTimer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -658,6 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ActiviTimer/ActiviTimer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
