@@ -28,7 +28,6 @@
 		5E3AC3652BB91AB2001C8876 /* ToDoListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AC3642BB91AB2001C8876 /* ToDoListViewViewModel.swift */; };
 		5E3AC3672BB91CB3001C8876 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AC3662BB91CB3001C8876 /* HeaderView.swift */; };
 		5E3AC3692BB9239F001C8876 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AC3682BB9239F001C8876 /* TLButton.swift */; };
-		5E4F03FE2E3FFD4700823DF5 /* YearlyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4F03FD2E3FFD3300823DF5 /* YearlyGridView.swift */; };
 		5E6E24492CD9DCB60075AEC3 /* TimeSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6E24482CD9DCB60075AEC3 /* TimeSegment.swift */; };
 		5E6E244B2CD9F2AE0075AEC3 /* TimeSegmentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6E244A2CD9F2AE0075AEC3 /* TimeSegmentListView.swift */; };
 		5E6E244E2CD9F66D0075AEC3 /* TimeFormatUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6E244D2CD9F66D0075AEC3 /* TimeFormatUtils.swift */; };
@@ -91,7 +90,6 @@
 		5E3AC3642BB91AB2001C8876 /* ToDoListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewViewModel.swift; sourceTree = "<group>"; };
 		5E3AC3662BB91CB3001C8876 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		5E3AC3682BB9239F001C8876 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
-		5E4F03FD2E3FFD3300823DF5 /* YearlyGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearlyGridView.swift; sourceTree = "<group>"; };
 		5E6E24482CD9DCB60075AEC3 /* TimeSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSegment.swift; sourceTree = "<group>"; };
 		5E6E244A2CD9F2AE0075AEC3 /* TimeSegmentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSegmentListView.swift; sourceTree = "<group>"; };
 		5E6E244D2CD9F66D0075AEC3 /* TimeFormatUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatUtils.swift; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 		5E7E58872BB8EC150091A086 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5E4F03FD2E3FFD3300823DF5 /* YearlyGridView.swift */,
 				5E3AC3662BB91CB3001C8876 /* HeaderView.swift */,
 				5E3AC3482BB919C6001C8876 /* LoginView.swift */,
 				5ED670202BB918CB0061210C /* MainView.swift */,
@@ -451,7 +448,6 @@
 				5E3AC34F2BB919EE001C8876 /* RegisterView.swift in Sources */,
 				5E3AC35B2BB91A8B001C8876 /* LoginViewViewModel.swift in Sources */,
 				5EAEC5D02CCDAD7A00BB11F8 /* TimerTaskListViewViewModel.swift in Sources */,
-				5E4F03FE2E3FFD4700823DF5 /* YearlyGridView.swift in Sources */,
 				5EDC5C202BB8DD7800363517 /* ToDoListApp.swift in Sources */,
 				5E3AC3652BB91AB2001C8876 /* ToDoListViewViewModel.swift in Sources */,
 				5E82EEEE2C68391C00548EC5 /* Extensions.swift in Sources */,
