@@ -11,9 +11,7 @@ import FirebaseFirestore
 
 class TaskTimerListViewViewModel: ObservableObject {
     @Published var showingNewTaskTimerView = false;
-    @Published var activeTaskId: String? = nil;
     @Published var activeTask: TaskTimer? = nil;
-    @Published var activeTaskName: String? = nil;
     @Published var elapsedTimeSeconds: TimeInterval = 0
     
     private var db: Firestore
@@ -68,9 +66,7 @@ class TaskTimerListViewViewModel: ObservableObject {
             
             if let activeTask = activeTaskTimers.first {
                 print("Found an active task, setting it to start: \(activeTask.title)")
-                self.activeTaskId = activeTask.id
                 self.activeTask = activeTask
-                self.activeTaskName = activeTask.title
                 self.elapsedTimeSeconds = Date().timeIntervalSince1970 - activeTask.startTime
                 self.startTimer()
             } else {
@@ -82,11 +78,15 @@ class TaskTimerListViewViewModel: ObservableObject {
     }
     
     func delete(id: String) {
+        // delete the task from the database
         db.collection("users")
             .document(userId)
             .collection("tasks")
             .document(id)
             .delete()
+        
+        // remove the task information from the local class
+        self.activeTask = nil
     }
     
     func fetchTaskFromDatabase(id: String, completion: @escaping (TaskTimer?) -> Void) {
@@ -128,8 +128,6 @@ class TaskTimerListViewViewModel: ObservableObject {
             resetTimer()
             
             self.activeTask = nil
-            self.activeTaskId = nil
-            self.activeTaskName = "none"
         }
 
         if startNewTask {
@@ -138,8 +136,6 @@ class TaskTimerListViewViewModel: ObservableObject {
             startTimer()
             
             activeTask = newTaskCopy
-            activeTaskId = newTaskCopy.id
-            activeTaskName = newTaskCopy.title
         }
     }
     
