@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseFirestore
 import AuthenticationServices
 import CryptoKit
 
@@ -64,11 +65,9 @@ class LoginViewViewModel: ObservableObject {
                 return
             }
 
-            let credential = OAuthProvider.credential(
-                withProviderID: "apple.com",
-                idToken: idTokenString,
-                rawNonce: nonce
-            )
+            let credential = OAuthProvider.appleCredential(withIDToken: idTokenString,
+                                                           rawNonce: nonce,
+                                                           fullName: appleIDCredential.fullName)
             Auth.auth().signIn(with: credential) {
                 (authResult, error) in
                 if error != nil {
@@ -78,19 +77,66 @@ class LoginViewViewModel: ObservableObject {
                     // your request to Apple.
                     print(
                         error?.localizedDescription
-                            as Any
+                        as Any
                     )
                     return
                 }
-                guard let email = Auth.auth().currentUser?.email else {
-                    print("signed in user email: nil")
+                guard
+                    let email = Auth.auth().currentUser?.email,
+                    let userId = Auth.auth().currentUser?.uid
+                else {
+                    print("email / userId was nil")
                     return
                 }
-                print("signed in user email: \(email)")
+                
+                guard let name = Auth.auth().currentUser?.displayName
+                else {
+                    print("did not find display name")
+                    return
+                }
+                print("found display name")
+            
+                
+                print("signed in user email: \(email) (id = \(userId)")
+                
+                let db = Firestore.firestore()
+                db.collection("users").document(userId).getDocument { snapshot, error in
+                    guard error == nil else {
+                        print("Error fetching user info from db: \(error?.localizedDescription ?? "Unknown error")")
+                        return
+                    }
+                    if snapshot?.exists ?? false {
+                        print("User already exists")
+                    } else {
+                        self.insertUserRecord(id: userId, name: name, email: email, joined: Date().timeIntervalSince1970)
+                    }
+                }
             }
         case .failure(let error):
             print("Sign in with Apple failed: \(error.localizedDescription)")
         }
+    }
+    
+    private func insertUserRecord(id: String, name: String, email: String, joined: TimeInterval) {
+        print("Creating new user data in db for: ", email)
+        let newUser = User(id: id,
+                           name: name,
+                           email: email,
+                           joined: Date().timeIntervalSince1970)
+        
+        let newUserDict = newUser.asDictionary()
+        print("User dictionary: ", newUserDict)
+        
+        let db = Firestore.firestore()
+        
+        db.collection("users")
+            .document(id)
+            .setData(newUserDict) { (error) in
+                if let e = error {
+                    print("Error saving: \(e)")
+                } else {
+                    print("Successfully saved to firestore db")
+                }}
     }
     
     private func randomNonceString(length: Int = 32) -> String {
