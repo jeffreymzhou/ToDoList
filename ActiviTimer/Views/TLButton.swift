@@ -23,7 +23,7 @@ struct TLButton: View {
                 Text(title)
                     .foregroundColor(Color.white)
                     .bold()
-            }.padding()
+            }
         }
     }
 }

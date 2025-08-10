@@ -33,8 +33,8 @@ struct LoginView: View {
 
                     TextField("Email Address", text: $viewModel.email)
                         .textFieldStyle(DefaultTextFieldStyle())
-                        .autocapitalization( /*@START_MENU_TOKEN@*/
-                            .none /*@END_MENU_TOKEN@*/
+                        .autocapitalization(
+                            .none
                         )
                         .autocorrectionDisabled()
 
