@@ -16,15 +16,23 @@ class ProfileViewViewModel: ObservableObject {
     @Published var user: User? = nil
     
     func fetchUser() {
+        print("fetch user called")
         guard let userId = Auth.auth().currentUser?.uid else {
+            print("no user id found")
             return
         }
         let db = Firestore.firestore()
+        
+        print("fetching user from db (user id \(userId))")
+        
         db.collection("users").document(userId).getDocument { [weak self] snapshot, error in
             guard let data = snapshot?.data(), error == nil else {
+                print("failed to get user from db")
+                print(error)
                 return
             }
             
+            print("found user in db - setting user info")
             DispatchQueue.main.async {
                 self?.user = User(
                     id: data["id"] as? String ?? "",
