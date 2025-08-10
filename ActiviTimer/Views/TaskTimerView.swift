@@ -21,11 +21,11 @@ struct TaskTimerView: View {
                 Text(task.title)
                     .font(.body)
                     .bold()
-                Text("Total time: " + formatTimeInterval(task.totalTimeSpent))
                 if task.id == activeTask?.id {
                     Text("Task has started: " + formatTimeInterval(elapsedTimeSeconds))
                 }
             }
+            .padding(.vertical, 8)
             
             Spacer()
             
